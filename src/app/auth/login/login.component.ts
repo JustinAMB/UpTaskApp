@@ -20,5 +20,22 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  login(){
+    const {email,password}=this.formulario.value;
+
+    this.userService.login(email,password)
+      .subscribe((ok)=>{
+        console.log('hola');
+        if(ok===true){
+          console.log(this.formulario.value);
+          //this.router.navigateByUrl('/heroes');
+        }else{
+          console.log(ok);
+          
+        }
+        
+      });
+
+  }
 
 }

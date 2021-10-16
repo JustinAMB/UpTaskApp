@@ -1,16 +1,16 @@
-<form action="">
+<form [formGroup]="formulario" (ngSubmit)="login()">
     <div class="campo">
         <label for="">Email:</label>
-        <input type="text">
+        <input type="text" formControlName="email">
     </div>
     <div class="campo">
         <label for="">Contraseña:</label>
-        <input type="text">
+        <input type="text" formControlName="password">
     </div>
 
 
 
-    <button type="submit">INICIAR SESION</button>
+    <button type="submit" [disabled]="formulario.invalid">INICIAR SESION</button>
     <a routerLink="/register">Crear cuenta</a>
 
 </form>
