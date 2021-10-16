@@ -1,0 +1,40 @@
+form {
+    background-color: #f1eff1;
+    padding: 3rem 2.5rem;
+}
+
+label {
+    display: block;
+    margin-block: 1rem;
+    font-weight: 700;
+}
+
+input {
+    border: 1px solid #111;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 5rem;
+}
+
+input:hover {
+    cursor: text;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #fcd232;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border: 1px solid #fcd232;
+    margin-top: 0.5rem;
+    margin-left: 12rem;
+}
+
+button:hover {
+    color: #6d5804;
+    background-color: transparent;
+    cursor: pointer;
+}
