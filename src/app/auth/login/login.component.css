@@ -22,6 +22,9 @@ input:hover {
 
 a {
     text-decoration: none;
+    color: #111;
+    display: block;
+    font-weight: 700;
 }
 
 button {
