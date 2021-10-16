@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,9 +10,9 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class RegistroComponent implements OnInit {
   formulario:FormGroup=this.fb.group({
-    username:['',[]],
-    email:['',[]],
-    password:['',[]]
+    username:['',[Validators.required,Validators.minLength(3)]],
+    email:['',[Validators.required]],
+    password:['',[Validators.required]]
   });
   constructor(private router: Router,private userService: UserService,private fb:FormBuilder) { }
 
