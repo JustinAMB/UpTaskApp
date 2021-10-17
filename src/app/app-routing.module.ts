@@ -3,12 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'auth',
     loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule),
     
-  },{
+  },
+  {
+    path: 'uptask',
+    loadChildren:()=>import('./uptask/uptask.module').then(m=>m.UptaskModule),
+    
+  },
+  {
     path:'**',
-    redirectTo:''
+    redirectTo:'auth'
   }
 ];
 

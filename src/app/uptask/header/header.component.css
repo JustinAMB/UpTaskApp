@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3e4e59;
+    padding: 1rem;
+    color: #ffffff;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
