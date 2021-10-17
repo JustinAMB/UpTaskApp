@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-projects.component.css']
 })
 export class ListaProjectsComponent implements OnInit {
-
+  agregar:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  agregarProyecto(){}
 }

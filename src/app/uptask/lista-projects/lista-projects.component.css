@@ -1,4 +1,53 @@
 :host {
     background-color: #567180;
+}
+
+.panel {
+    margin: 1rem;
     padding: 1rem;
+}
+
+h2 {
+    color: #f5d146;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.1rem;
+}
+
+button {
+    background-color: #fdd230;
+    padding: 1rem;
+    border: 1px solid #fdd230;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+button:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: #f8c50a;
+}
+
+ul {
+    list-style: none;
+    padding: 1.5rem 0 0 0;
+    margin: 0;
+}
+
+li {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+li:hover {
+    color: #fdd230;
+    cursor: pointer;
+}
+
+.active {
+    color: #fdd230;
 }

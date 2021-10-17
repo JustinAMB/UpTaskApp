@@ -1,1 +1,18 @@
-<p>lista-projects works!</p>
+<div class="panel">
+    <button (click)="agregarProyecto()">
+        Nuevo Proyecto <i class="uil uil-plus"></i> 
+    </button>
+</div>
+
+<div class="panel">
+    <h2>Proyectos</h2>
+
+    <ul>
+        <li routerLinkActive="active">Hola</li>
+        <li routerLinkActive="active">Adios</li>
+        <li routerLinkActive="active">Nuevo</li>
+    </ul>
+</div>
+<div *ngIf="agregar" class="panel">
+    <input type="text">
+</div>
