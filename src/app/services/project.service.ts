@@ -11,12 +11,12 @@ export class ProjectService {
   constructor(private http:HttpClient) { }
 
 
-  listaTasks(user:number){
+  listaProjects(user:number){
     const url=`${this.api}/Project/${user}`;
 
     return this.http.get<Resp>(url);
   }
-  crearTask(user:number,titulo:string){
+  crearProject(user:number,titulo:string){
     const url=`${this.api}/Task/create`;
     return this.http.post<Resp>(url,{user,titulo});
   }

@@ -8,9 +8,7 @@
     <h2>Proyectos</h2>
 
     <ul>
-        <li routerLinkActive="active">Hola</li>
-        <li routerLinkActive="active">Adios</li>
-        <li routerLinkActive="active">Nuevo</li>
+        <li routerLinkActive="active" *ngFor="let project of projects">{{project.titulo}}</li>
     </ul>
 </div>
 <div *ngIf="agregar" class="panel">
