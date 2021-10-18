@@ -10,10 +10,10 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ListaProjectsComponent implements OnInit {
   agregar:boolean=false;
-  constructor(private userService: UserService,private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService) { }
   projects: Project[] = [];
   ngOnInit(): void {
-    this.projectService.listaProjects(this.userService.user.id)
+    this.projectService.listaProjects()
     .subscribe(resp=>{
       this.projects=resp.data;
     });

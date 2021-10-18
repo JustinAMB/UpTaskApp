@@ -24,12 +24,9 @@ export class UserService {
 
         if(resp.ok===true){
           localStorage.setItem('token',resp.token!);
-                this._user={
-                  username:resp.data.username,
-                  email:resp.data.correo,
-                  id:resp.data.id,  
-                  password:resp.data.password
-                }
+                this._user=resp.data
+                  
+                
 
           
         }
@@ -67,12 +64,9 @@ export class UserService {
             .pipe(
               map(resp=>{
                 localStorage.setItem('token',resp.token!);
-                this._user={
-                  username:resp.data.username,
-                  email:resp.data.correo,
-                  id:resp.data.id,  
-                  password:resp.data.password  
-                }
+                this._user=resp.data
+                    
+                
                 
                 return resp.ok;
               }),
