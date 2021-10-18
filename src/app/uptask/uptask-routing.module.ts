@@ -9,11 +9,11 @@ const routes: Routes = [
     component:MainComponent,
     children: [
       {
-        path:'tareas',
+        path:'tareas/:id',
         component:ListaTasksComponent
       },{
         path:'**',
-        redirectTo:'tareas'
+        redirectTo:'tareas/0'
       }
       
     ]

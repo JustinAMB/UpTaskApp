@@ -8,9 +8,9 @@
     <h2>Proyectos</h2>
 
     <ul>
-        <li routerLinkActive="active" *ngFor="let project of projects">{{project.titulo}}</li>
+        <li [routerLink]="['tareas',  project.id]" routerLinkActive=" active " *ngFor="let project of projects ">{{project.titulo}}</li>
     </ul>
 </div>
-<div *ngIf="agregar" class="panel">
-    <input type="text">
+<div *ngIf="agregar " class="panel ">
+    <input type="text ">
 </div>
