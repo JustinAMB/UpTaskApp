@@ -24,13 +24,16 @@ export class LoginComponent implements OnInit {
     const {email,password}=this.formulario.value;
 
     this.userService.login(email,password)
-      .subscribe((ok)=>{
-        console.log('hola');
-        if(ok===true){
+      .subscribe((resp)=>{
+        
+
+        if(resp.ok===true){
           console.log(this.formulario.value);
-          //this.router.navigateByUrl('/heroes');
+          
+          this.router.navigateByUrl('/uptask');
+          
         }else{
-          console.log(ok);
+          console.log(resp);
           
         }
         

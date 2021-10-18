@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
   {
     path: 'uptask',
     loadChildren:()=>import('./uptask/uptask.module').then(m=>m.UptaskModule),
-    
+    canLoad:[AuthGuard],
+    canActivate:[AuthGuard]
   },
   {
     path:'**',

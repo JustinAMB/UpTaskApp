@@ -13,7 +13,7 @@ export class ListaProjectsComponent implements OnInit {
   constructor(private userService: UserService,private projectService: ProjectService) { }
   projects: Project[] = [];
   ngOnInit(): void {
-    this.projectService.listaProjects(this.userService.user.id)
+    this.projectService.listaProjects(1)
     .subscribe(resp=>{
       this.projects=resp.data;
     });
