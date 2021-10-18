@@ -20,4 +20,20 @@ export class TaskService {
     const url=`${this.api}/Task/create`;
     return this.http.post<Resp>(url,{project,descripcion});
   }
-}
+}/*.pipe(
+      tap(resp=>{
+
+        if(resp.ok===true){
+          localStorage.setItem('token',resp.token!);
+                this._user={
+                  username:resp.data.username,
+                  email:resp.data.correo,
+                  id:resp.data.id,  
+                  password:resp.data.password
+                }
+          
+        }
+      }),
+     
+      catchError(err=>of(err.error.msg))
+    ); */

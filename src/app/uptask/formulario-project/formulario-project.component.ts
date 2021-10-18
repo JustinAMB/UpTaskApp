@@ -21,7 +21,9 @@ export class FormularioProjectComponent implements OnInit {
     if(!this.formulario.invalid){
       const {titulo}=this.formulario.value;
       this.projectService.crearProject(titulo).subscribe(resp=>{
-        console.log(resp.ok);
+        if(resp.ok===true){
+          this.projectService.agregar=false;
+        }
       });
     }
     

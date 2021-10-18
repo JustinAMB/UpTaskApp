@@ -9,17 +9,19 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./lista-projects.component.css']
 })
 export class ListaProjectsComponent implements OnInit {
-  agregar:boolean=false;
+  
   constructor(private projectService: ProjectService) { }
-  projects: Project[] = [];
+  get projects() :Project[] {
+    return this.projectService.projects;
+  }
+  get agregar() :boolean{
+    return this.projectService.agregar;
+  }
   ngOnInit(): void {
-    this.projectService.listaProjects()
-    .subscribe(resp=>{
-      this.projects=resp.data;
-    });
+    this.projectService.listaProjects(); 
   }
   agregarProyecto(){
-    this.agregar=true;
+    this.projectService.agregar=true;
   }
   crearProyecto(){
     
