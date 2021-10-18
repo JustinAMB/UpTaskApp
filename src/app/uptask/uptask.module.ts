@@ -8,8 +8,9 @@ import { MainComponent } from './main/main.component';
 import { ListaTasksComponent } from './lista-tasks/lista-tasks.component';
 import { FormularioTaskComponent } from './formulario-task/formulario-task.component';
 import { TaskComponent } from './task/task.component';
+import { FormularioProjectComponent } from './formulario-project/formulario-project.component';
 
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ListaProjectsComponent,
@@ -17,10 +18,12 @@ import { TaskComponent } from './task/task.component';
     MainComponent,
     ListaTasksComponent,
     FormularioTaskComponent,
-    TaskComponent
+    TaskComponent,
+    FormularioProjectComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     UptaskRoutingModule
   ]
 })
