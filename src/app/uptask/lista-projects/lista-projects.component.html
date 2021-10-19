@@ -11,6 +11,6 @@
         <li [routerLink]="['tareas',  project.id]" routerLinkActive=" active " *ngFor="let project of projects ">{{project.titulo}}</li>
     </ul>
 </div>
-<div *ngIf="agregar " class="panel ">
+<div *ngIf="agregar " class=" panel">
     <app-formulario-project></app-formulario-project>
 </div>

@@ -1,6 +1,7 @@
 :host {
     background-color: #567180;
     height: 100%;
+    max-width: 100%;
 }
 
 .panel {
