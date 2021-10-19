@@ -6,7 +6,11 @@
 
 
     </app-formulario-task>
-    <ul>
-        <li *ngFor="let task of tasks">{{task.descripcion}}</li>
-    </ul>
+
+
+</div>
+<div class="contenedor  contenedor-task">
+
+
+    <app-task [task]="task" *ngFor="let task of tasks"></app-task>
 </div>

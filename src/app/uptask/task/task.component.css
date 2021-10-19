@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+    margin-inline: 0.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+i {
+    font-size: 1.7rem;
+}
+
+.terminada {
+    color: rgb(23, 216, 32);
+}

@@ -16,5 +16,7 @@ export class FormularioTaskComponent implements OnInit {
 
   ngOnInit(): void {
   }
-crearTarea(){}
+  crearTarea(){
+    
+  }
 }

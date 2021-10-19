@@ -13,7 +13,6 @@ export class TaskService {
 
   listaTasks(project:number){
     const url=`${this.api}/Task/${project}`;
-
     return this.http.get<Resp>(url);
   }
   crearTask(project:number,descripcion:string){
