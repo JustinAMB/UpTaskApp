@@ -1,1 +1,11 @@
-<p>formulario-task works!</p>
+<form [formGroup]="formulario" (ngSubmit)="crearTarea()">
+    <div class="campo">
+        <label for="tarea">Tarea:</label>
+        <input id="tarea" type="text" placeholder="Nombre Tarea" formControlName="descripcion">
+    </div>
+    <div class="contenedor-button">
+        <button type="submit" [disabled]="formulario.invalid">Agregar</button>
+    </div>
+
+
+</form>

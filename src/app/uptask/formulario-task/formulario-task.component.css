@@ -1,0 +1,40 @@
+form {
+    background-color: #567180;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    margin-block: 1rem;
+    color: #ffffff;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-block: 0.5rem;
+    padding-left: 5rem;
+}
+
+input[type="text"] {
+    padding: 1rem;
+    border: none;
+    display: block;
+    border-radius: 3rem;
+    font-size: 1rem;
+}
+
+.contenedor-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-block: 0.5rem;
+}
+
+button {
+    background-color: #fdd230;
+    padding: 1rem;
+    border: 1px solid #fdd230;
+    font-weight: 700;
+    font-size: 1rem;
+}
