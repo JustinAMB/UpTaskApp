@@ -11,7 +11,7 @@
 h2 {
     color: #f5d146;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 0.1rem;
 }
@@ -21,7 +21,7 @@ button {
     padding: 1rem;
     border: 1px solid #fdd230;
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.1rem;
 }
 
 button:hover {
@@ -39,7 +39,7 @@ ul {
 li {
     color: #ffffff;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 0.2rem;
     margin-bottom: 0.4rem;
 }
