@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { TaskService } from 'src/app/services/task.service';
 import { Task } from 'src/app/interfaces/task';
+import { ProjectService } from 'src/app/services/project.service';
 @Component({
   selector: 'app-lista-tasks',
   templateUrl: './lista-tasks.component.html',
@@ -10,9 +11,16 @@ import { Task } from 'src/app/interfaces/task';
 })
 export class ListaTasksComponent implements OnInit {
  
-  constructor(private taskService: TaskService,private route: ActivatedRoute) { }
+  constructor(private projectService:ProjectService, private taskService: TaskService,private route: ActivatedRoute) { }
   get tasks():Task[] { 
     return this.taskService.tasks;
+  }
+
+  get project():string{
+    
+    const project=this.projectService.projects.find(p=>p.id==this.taskService.project);
+    
+    return  project?.titulo || '';
   }
   ngOnInit(): void {
     
