@@ -2,38 +2,30 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Resp } from '../interfaces/resp';
-
+import { Task } from 'src/app/interfaces/task';
+import { tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
   private api:string=environment.api;
   project:number=0;
+  tasks!:Task[];
   constructor(private http:HttpClient) { }
 
 
-  listaTasks(project:number){
-    const url=`${this.api}/Task/${project}`;
-    return this.http.get<Resp>(url);
+  listaTasks(){
+    const url=`${this.api}/Task/${this.project}`;
+    this.http.get<Resp>(url).subscribe(resp=>this.tasks=resp.data);
   }
   crearTask(project:number,descripcion:string){
     const url=`${this.api}/Task/create`;
-    return this.http.post<Resp>(url,{project,descripcion});
-  }
-}/*.pipe(
+    return this.http.post<Resp>(url,{project,descripcion}).pipe(
       tap(resp=>{
-
         if(resp.ok===true){
-          localStorage.setItem('token',resp.token!);
-                this._user={
-                  username:resp.data.username,
-                  email:resp.data.correo,
-                  id:resp.data.id,  
-                  password:resp.data.password
-                }
-          
+          this.listaTasks();
         }
-      }),
-     
-      catchError(err=>of(err.error.msg))
-    ); */
+      })
+    );
+  }
+}

@@ -19,7 +19,7 @@ export class ListaTasksComponent implements OnInit {
       .pipe(
           switchMap(({ id }) =>{
             this.taskService.project=id;
-            return this.taskService.listaTasks(id);
+            return this.taskService.listaTasks();
           }
             
           )
