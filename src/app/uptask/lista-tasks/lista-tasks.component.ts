@@ -15,7 +15,9 @@ export class ListaTasksComponent implements OnInit {
   get tasks():Task[] { 
     return this.taskService.tasks;
   }
-
+  get hayProject():boolean{
+    return this.taskService.project>0;
+  }
   get project():string{
     
     const project=this.projectService.projects.find(p=>p.id==this.taskService.project);
@@ -23,12 +25,9 @@ export class ListaTasksComponent implements OnInit {
     return  project?.titulo || '';
   }
   ngOnInit(): void {
-    
-
     this.route.params.subscribe(({ id }) =>{
         this.taskService.project=id;
         return this.taskService.listaTasks();
       });
   }
-
 }

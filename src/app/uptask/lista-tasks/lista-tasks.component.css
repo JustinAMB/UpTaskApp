@@ -20,3 +20,7 @@ h2 span {
 .contenedor-task app-task:not(:last-of-type) {
     border-bottom: 1px solid #757474;
 }
+
+.contenedor-task h3 {
+    text-align: center;
+}

@@ -1,19 +1,31 @@
-<h2>Proyecto Actual:
-    <span>{{project}}</span></h2>
-<div class="contenedor">
-    <app-formulario-task>
+<div *ngIf="hayProject;else notProject">
+    <h2>Proyecto Actual:
+        <span>{{project}}</span></h2>
+    <div class="contenedor">
+        <app-formulario-task>
 
 
 
 
 
-    </app-formulario-task>
+        </app-formulario-task>
 
+
+    </div>
+    <h2>Lista de tareas</h2>
+    <div class="contenedor  contenedor-task">
+        <div *ngIf="tasks.length>0 ;else notTasks">
+            <app-task [task]="task" *ngFor="let task of tasks"></app-task>
+        </div>
+        <ng-template #notTasks>
+            <h3>No hay tareas, agrega una</h3>
+        </ng-template>
+
+
+
+    </div>
 
 </div>
-<h2>Lista de tareas</h2>
-<div class="contenedor  contenedor-task">
-
-
-    <app-task [task]="task" *ngFor="let task of tasks"></app-task>
-</div>
+<ng-template #notProject>
+    <h2>No hay un Proyecto seleccionado</h2>
+</ng-template>
