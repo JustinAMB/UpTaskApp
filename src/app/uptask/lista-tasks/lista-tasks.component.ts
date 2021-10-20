@@ -17,7 +17,12 @@ export class ListaTasksComponent implements OnInit {
 
     this.route.params
       .pipe(
-          switchMap(({ id }) => this.taskService.listaTasks(id))
+          switchMap(({ id }) =>{
+            this.taskService.project=id;
+            return this.taskService.listaTasks(id);
+          }
+            
+          )
       )
       .subscribe((resp) => this.tasks = resp.data);
   }

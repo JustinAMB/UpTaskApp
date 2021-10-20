@@ -5,4 +5,17 @@
 
 .contenedor-task {
     background-color: #f1eff1;
+    padding-block: 1.6rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+h2 span {
+    font-weight: 300;
+}
+
+.contenedor-task app-task:not(:last-of-type) {
+    border-bottom: 1px solid #757474;
 }

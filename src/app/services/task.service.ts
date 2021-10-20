@@ -8,6 +8,7 @@ import { Resp } from '../interfaces/resp';
 })
 export class TaskService {
   private api:string=environment.api;
+  project:number=0;
   constructor(private http:HttpClient) { }
 
 
