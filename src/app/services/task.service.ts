@@ -28,4 +28,24 @@ export class TaskService {
       })
     );
   }
+  eliminar(id:number){
+    const url=`${this.api}/Task/${id}`;
+    return this.http.delete<Resp>(url).pipe(
+      tap(resp=>{
+        if(resp.ok===true){
+          this.listaTasks();
+        }
+      })
+    );
+  }
+  actualizarEstado(id:number){
+    const url=`${this.api}/Task/${id}`;
+    return this.http.put<Resp>(url,{}).pipe(
+      tap(resp=>{
+        if(resp.ok===true){
+          this.listaTasks();
+        }
+      })
+    );
+  }
 }
