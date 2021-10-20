@@ -1,8 +1,8 @@
 <h3>{{task.descripcion}}</h3>
 <div>
-    <button>
+    <button (click)="actualizarEstado()">
         <i [ngClass]="{'terminada':task.estado!==true}" class="uil uil-check-circle"></i>
     </button>
-    <button><i  class="uil uil-trash-alt"></i></button>
+    <button (click)="eliminar()"><i class="uil uil-trash-alt"></i></button>
 
 </div>
