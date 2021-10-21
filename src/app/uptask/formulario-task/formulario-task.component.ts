@@ -17,6 +17,12 @@ export class FormularioTaskComponent implements OnInit {
   ngOnInit(): void {
   }
   crearTarea(){
-    
+    if(!this.formulario.invalid){
+      const {descripcion}=this.formulario.value;
+      this.taskService.crearTask(descripcion).subscribe(resp=>{
+        console.log(resp);
+
+      });
+    }
   }
 }

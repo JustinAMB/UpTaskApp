@@ -18,9 +18,9 @@ export class TaskService {
     const url=`${this.api}/Task/${this.project}`;
     this.http.get<Resp>(url).subscribe(resp=>this.tasks=resp.data);
   }
-  crearTask(project:number,descripcion:string){
+  crearTask(descripcion:string){
     const url=`${this.api}/Task/create`;
-    return this.http.post<Resp>(url,{project,descripcion}).pipe(
+    return this.http.post<Resp>(url,{project:this.project,descripcion}).pipe(
       tap(resp=>{
         if(resp.ok===true){
           this.listaTasks();
