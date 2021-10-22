@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TaskService } from 'src/app/services/task.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-formulario-task',
   templateUrl: './formulario-task.component.html',
@@ -20,7 +20,16 @@ export class FormularioTaskComponent implements OnInit {
     if(!this.formulario.invalid){
       const {descripcion}=this.formulario.value;
       this.taskService.crearTask(descripcion).subscribe(resp=>{
-        console.log(resp);
+        if(resp.ok===true){
+          Swal.fire(
+            'Registrada',
+            'Tarea registrada existosamente',
+            'success'
+          );
+         
+        }else{
+          Swal.fire('Error',resp.msg,'error');
+        }
 
       });
     }
